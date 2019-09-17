@@ -38,13 +38,29 @@ print(max(agents)) # this only takes in account the first y, not x
 print(max(agents, key=operator.itemgetter(1)))
 #print (y0)
 
+#matplotlib.pyplot.ylim(0, 99)
+#matplotlib.pyplot.xlim(0, 99)
+#matplotlib.pyplot.scatter(agents[0][1],agents[0][0])
+#matplotlib.pyplot.scatter(agents[1][1],agents[1][0])
+#max_dot = max(agents, key=operator.itemgetter(1))
+#matplotlib.pyplot.scatter(max_dot[1],max_dot[0], color='red')
+#matplotlib.pyplot.show()
+
+
 matplotlib.pyplot.ylim(0, 99)
 matplotlib.pyplot.xlim(0, 99)
-matplotlib.pyplot.scatter(agents[0][1],agents[0][0])
-matplotlib.pyplot.scatter(agents[1][1],agents[1][0])
+
+for i in range(num_of_agents):
+    print(i)
+    matplotlib.pyplot.scatter(agents[i][1],agents[i][0])
 max_dot = max(agents, key=operator.itemgetter(1))
-matplotlib.pyplot.scatter(max_dot[1],max_dot[0], color='red')
+matplotlib.pyplot.scatter(max_dot[1],max_dot[0], color='red')    
+
+#matplotlib.pyplot.scatter(agents[1][1],agents[1][0])
+#max_dot = max(agents, key=operator.itemgetter(1))
+#matplotlib.pyplot.scatter(max_dot[1],max_dot[0], color='red')
 matplotlib.pyplot.show()
+
 
 
 ## Move y0 randomly
